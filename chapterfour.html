@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A short, chapter-based guide to the history of web development, from the first website to modern web apps.">
+  <title>Chapter 4: Mobile &amp; responsive design | A Brief History of Web Development</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="site-name" href="index.html"><span class="site-icon" aria-hidden="true">W</span> A Brief History of Web Development</a>
+    <p class="site-tagline">A small guide to a very big idea.</p>
+  </header>
+
+  <div class="window">
+    <div class="title-bar"><span aria-hidden="true">▣</span><span>A Brief History of Web Development</span><span class="window-label">1989 → Today</span></div>
+    <nav class="chapter-nav" aria-label="Main navigation">
+      <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chapterone.html"><span class="chapter-number color-1">01</span> Chapter 1</a></li>
+            <li><a href="chaptertwo.html"><span class="chapter-number color-2">02</span> Chapter 2</a></li>
+            <li><a href="chapterthree.html"><span class="chapter-number color-3">03</span> Chapter 3</a></li>
+            <li><a href="chapterfour.html" aria-current="page"><span class="chapter-number color-4">04</span> Chapter 4</a></li>
+            <li><a href="chapterfive.html"><span class="chapter-number color-5">05</span> Chapter 5</a></li>
+      </ul>
+    </nav>
+    <main id="main-content" class="chapter-content">
+      <div class="page-layout">
+        <article class="reading-pane">
+          <header class="chapter-heading">
+            <p class="eyebrow"><span class="chapter-number color-4">04</span> Chapter 4 / The 2010s</p>
+            <h1>Mobile &amp; responsive design</h1>
+            <p class="chapter-intro">The web learns to fit in your pocket, and on almost any other screen.</p>
+          </header>
+          <div class="article-body">
+            <section class="chapter-section" id="responsive-design" aria-labelledby="responsive-design-title">
+              <p class="section-date">2010</p>
+              <h2 id="responsive-design-title">One website, many screens</h2>
+              <p>As phones and tablets became common ways to browse, a layout made only for a desktop monitor was no longer enough. Text needed to remain readable, images needed to fit, and navigation needed to work in less space.</p>
+              <p>In his 2010 article, Ethan Marcotte described responsive web design using fluid grids, flexible images, and media queries. A page could adapt to the available space instead of requiring a separate design for every device.</p>
+            </section><figure class="image-window devices-image">
+              <div class="image-title"><span aria-hidden="true">▧</span> One web, many screens</div>
+              <!-- Replace this src with images/your-image.jpg when your JPG is ready. -->
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Responsive_Web_Design_Demo_Template.svg"
+                alt="An illustration of a desktop computer, tablet, and phone" width="640" height="420" loading="lazy"
+                data-fallback="phones.webp" data-fallback-alt="Mobile phones on display from the original project"
+                data-fallback-caption="The same content needs to work on many different screens.">
+              <figcaption><span class="image-caption">The same content can fit a desktop, a tablet, or a phone.</span>
+                <span class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:Responsive_Web_Design_Demo_Template.svg">Image: TheBertag</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></span>
+              </figcaption>
+            </figure><section class="chapter-section" id="mobile-first" aria-labelledby="mobile-first-title">
+              <p class="section-date">The 2010s</p>
+              <h2 id="mobile-first-title">Start small, then build outward</h2>
+              <p>A mobile-first approach begins with the essential content and layout for a small screen. As more space becomes available, the design can add columns, wider images, or other useful changes.</p>
+              <p>The goal is not simply to shrink a desktop page. It is to make the content, navigation, and controls work well wherever someone opens the website.</p>
+            </section><div class="code-example">
+              <h3>A simple responsive rule</h3>
+              <pre><code>/* Stack the columns on smaller screens. */
+@media (max-width: 700px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+            </div><aside class="note"><h3>Try it on this page</h3><p>Make your browser window narrower. The reading area and chapter guide stack, while the navigation wraps to fit the screen.</p></aside><details class="sources" id="sources">
+              <summary>Sources &amp; further reading</summary>
+              <ul>
+                <li><a href="https://alistapart.com/article/responsive-web-design/">Ethan Marcotte: Responsive Web Design, 2010</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">MDN: responsive design</a></li>
+              </ul>
+            </details>
+          </div>
+          <nav class="page-turner" aria-label="Previous and next chapter">
+            <a class="button" href="chapterthree.html">← Chapter 3</a>
+            <a class="button primary-button" href="chapterfive.html">Next: chapter 5 →</a>
+          </nav>
+        </article>
+        <aside class="chapter-guide" aria-label="Chapter guide">
+            <h2>Chapter directory</h2>
+            <ol>
+              <li><a href="chapterone.html"><span class="chapter-number color-1">01</span><span>The early years</span></a></li>
+              <li><a href="chaptertwo.html"><span class="chapter-number color-2">02</span><span>Dynamic web content</span></a></li>
+              <li><a href="chapterthree.html"><span class="chapter-number color-3">03</span><span>The rise of Web 2.0</span></a></li>
+              <li><a href="chapterfour.html" aria-current="page"><span class="chapter-number color-4">04</span><span>Mobile & responsive design</span></a></li>
+              <li><a href="chapterfive.html"><span class="chapter-number color-5">05</span><span>Modern web development</span></a></li>
+            </ol>
+            <p class="guide-note">Read in order, or open the chapter that interests you.</p>
+            <a class="guide-home" href="index.html">← Back to the start</a>
+          </aside>
+      </div>
+    </main>
+    <div class="status-bar"><span>Reading chapter 4 of 5</span><a href="#top">Back to top ↑</a></div>
+  </div>
+  <footer class="site-footer">
+    <p>A learning project by Michael Pacheco · Originally created in 2023</p>
+    <a href="https://github.com/michaelpacheco037">GitHub</a>
+  </footer>
+</body>
+</html>

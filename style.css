@@ -1,0 +1,247 @@
+/* A small Windows 95-inspired theme. All pages share this file. */
+:root {
+  --desktop: #237e80;
+  --panel: #c6c6c6;
+  --paper: #fffef9;
+  --ink: #202126;
+  --blue: #000080;
+  --light-border: #ffffff;
+  --dark-border: #727272;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 28px 24px 18px;
+  background: var(--desktop);
+  color: var(--ink);
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a { color: var(--blue); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+button { font: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid #9d3b09;
+  outline-offset: 4px;
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p, figure { margin-top: 0; }
+h1, h2, h3 { line-height: 1.22; }
+h1 { font-size: 2.25rem; letter-spacing: -1px; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1rem; }
+p { margin-bottom: 18px; }
+
+.skip-link {
+  position: absolute;
+  left: 24px;
+  top: -100px;
+  z-index: 10;
+  padding: 10px 14px;
+  background: white;
+}
+.skip-link:focus { top: 8px; }
+.site-header, .window, .site-footer { max-width: 1080px; margin: 0 auto; }
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 14px;
+  color: white;
+}
+.site-name { color: white; font-weight: bold; text-decoration: none; }
+.site-icon {
+  display: inline-block;
+  width: 26px;
+  margin-right: 7px;
+  border: 1px solid white;
+  font-family: "Courier New", monospace;
+  text-align: center;
+}
+.site-tagline { margin: 0; font-size: 0.8rem; }
+
+/* Light top/left edges and dark bottom/right edges make raised panels. */
+.window, .button, .chapter-nav a {
+  border: 2px solid;
+  border-color: var(--light-border) var(--dark-border) var(--dark-border) var(--light-border);
+}
+.window { background: var(--panel); padding: 5px; box-shadow: 3px 3px 0 #1c5457; }
+.title-bar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 10px;
+  background: var(--blue);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.window-label { margin-left: auto; font-family: "Courier New", monospace; white-space: nowrap; font-weight: normal; }
+.chapter-nav ul { display: flex; flex-wrap: wrap; gap: 7px; padding: 10px 5px; margin: 0; list-style: none; }
+.chapter-nav a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 5px 12px;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.chapter-nav a:hover, .button:hover { background: #e4e4e4; }
+.chapter-nav a[aria-current="page"], .button:active {
+  background: var(--paper);
+  border-color: var(--dark-border) var(--light-border) var(--light-border) var(--dark-border);
+}
+.chapter-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 4px;
+  color: white;
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.color-1 { background: #a32c30; }
+.color-2 { background: #236b42; }
+.color-3 { background: #234c9d; }
+.color-4 { background: #7a347f; }
+.color-5 { background: #915500; }
+
+/* The paper area has a recessed edge, like an old application window. */
+.home-content, .chapter-content {
+  background: var(--paper);
+  border: 2px solid;
+  border-color: var(--dark-border) white white var(--dark-border);
+}
+.home-content { padding: 32px; }
+.home-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; margin-bottom: 36px; }
+.home-intro h1 { margin-bottom: 14px; }
+.eyebrow { font-family: "Courier New", monospace; font-size: 0.8rem; letter-spacing: 0.4px; }
+.lead { font-size: 1.15rem; font-weight: bold; }
+.button {
+  display: inline-block;
+  padding: 9px 15px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.primary-button { color: var(--blue); }
+.directory-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.directory-heading h2 { margin-bottom: 14px; }
+.directory-heading p { font-size: 0.85rem; }
+.chapter-list { list-style: none; padding: 0; margin: 0; border: 1px solid #aaa; }
+.chapter-list li + li { border-top: 1px solid #bbb; }
+.chapter-list a { display: flex; align-items: center; gap: 16px; padding: 15px 18px; color: var(--ink); text-decoration: none; }
+.chapter-list a:hover { background: #eeeee5; }
+.chapter-list .chapter-number { width: 34px; height: 34px; font-size: 1rem; }
+.chapter-list strong { display: block; font-size: 0.95rem; }
+.chapter-list small { display: block; margin-top: 3px; font-size: 0.8rem; }
+.chapter-era { margin-left: auto; padding-left: 10px; color: #505055; font-family: "Courier New", monospace; font-size: 0.75rem; white-space: nowrap; }
+.home-note { margin-top: 26px; padding: 16px 18px; border-left: 4px solid #915500; background: #f0ecdb; font-size: 0.85rem; }
+.home-note p { margin: 4px 0 0; }
+
+.page-layout { display: grid; grid-template-columns: minmax(0, 1fr) 210px; }
+.reading-pane { min-width: 0; padding: 32px; }
+.chapter-heading { padding-bottom: 22px; margin-bottom: 28px; border-bottom: 1px solid #aaa; }
+.chapter-heading .eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.chapter-heading h1 { margin-bottom: 12px; }
+.chapter-intro { margin: 0; color: #505055; font-size: 1rem; }
+.chapter-section { margin: 28px 0; scroll-margin-top: 24px; }
+.section-date { margin-bottom: 6px; color: #555; font-family: "Courier New", monospace; font-size: 0.8rem; }
+.chapter-section h2 { margin-bottom: 16px; }
+.article-body { max-width: 70ch; }
+.chapter-guide { padding: 26px 16px; background: #eae9e0; border-left: 1px solid #aaa; }
+.chapter-guide h2 { font-size: 0.9rem; }
+.chapter-guide ol { list-style: none; padding: 0; margin: 0; }
+.chapter-guide a { display: flex; gap: 8px; align-items: flex-start; padding: 10px 5px; font-size: 0.8rem; text-decoration: none; }
+.chapter-guide a:hover { text-decoration: underline; }
+.chapter-guide a[aria-current="page"] { background: white; outline: 1px solid #bbb; font-weight: bold; }
+.chapter-guide .chapter-number { min-width: 24px; height: 24px; }
+.guide-note { font-size: 0.75rem; margin: 20px 5px 5px; }
+.chapter-guide .guide-home { margin-top: 15px; border-top: 1px solid #bbb; }
+
+.image-window { margin: 28px 0; padding: 4px; background: var(--panel); border: 1px solid #777; }
+.home-intro .image-window { margin: 0; }
+.image-title { padding: 4px 7px; background: #62656b; color: white; font-size: 0.75rem; font-weight: bold; }
+.image-window img { display: block; width: 100%; height: auto; max-height: 330px; object-fit: contain; background: #f5f5f0; margin-top: 4px; }
+.home-intro img { aspect-ratio: 4 / 3; object-fit: contain; }
+.portrait img { height: 285px; padding: 10px; }
+.logo-image img { height: 210px; padding: 20px; }
+.devices-image img { height: 260px; padding: 14px; }
+.image-window figcaption { padding: 10px 8px 7px; font-size: 0.75rem; line-height: 1.6; }
+.image-credit { display: block; margin-top: 5px; font-size: 0.7rem; }
+.image-window.image-missing img { min-height: 100px; padding: 18px; }
+.note, .code-example, .demo-box { margin: 26px 0; padding: 18px 20px; background: #f0ecdb; border-left: 4px solid #915500; }
+.note p { margin-bottom: 0; font-size: 0.9rem; }
+.code-example, .demo-box { background: #e8edf4; border-left-color: #234c9d; }
+.code-example dl { display: grid; grid-template-columns: 95px 1fr; gap: 6px; margin: 0; }
+.code-example dt { font-family: "Courier New", monospace; font-weight: bold; }
+.code-example dd { margin: 0; font-size: 0.9rem; }
+pre { margin: 0; padding: 12px; overflow: auto; background: var(--paper); font-size: 0.8rem; line-height: 1.7; }
+code { font-family: "Courier New", monospace; }
+.demo-box #demo-message { font-family: "Courier New", monospace; font-weight: bold; }
+.demo-box #demo-message.changed { color: var(--blue); background: white; padding: 8px; }
+.sources { padding: 16px 0; border-top: 1px solid #aaa; font-size: 0.85rem; }
+.sources summary { width: fit-content; cursor: pointer; font-weight: bold; }
+.sources ul { padding-left: 22px; margin-bottom: 0; }
+.sources li + li { margin-top: 8px; }
+.resource-list { list-style: none; padding: 0; }
+.resource-list li { padding: 10px 0; border-bottom: 1px dotted #aaa; }
+.resource-list a { font-weight: bold; }
+.resource-list span { display: block; font-size: 0.85rem; }
+.page-turner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 28px; padding-top: 20px; border-top: 1px solid #aaa; }
+.status-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 8px 10px 3px; font-size: 0.75rem; }
+.status-bar > * { padding: 3px 8px; border: 1px solid; border-color: #888 #eee #eee #888; }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 16px; color: white; font-size: 0.75rem; }
+.site-footer p { margin: 0; }
+.site-footer a { color: white; }
+
+/* Keep the retro look while letting the layout adapt to smaller screens. */
+@media (max-width: 850px) {
+  .site-tagline { display: none; }
+  .home-intro { grid-template-columns: 1fr; gap: 26px; align-items: start; }
+  .home-intro .image-window { max-width: 560px; }
+  .chapter-nav ul { gap: 5px; }
+  .chapter-nav a { padding: 6px 9px; }
+}
+@media (max-width: 700px) {
+  body { padding: 18px 12px; }
+  .page-layout { grid-template-columns: 1fr; }
+  .reading-pane, .home-content { padding: 24px 18px; }
+  .chapter-guide { border-left: 0; border-top: 1px solid #aaa; }
+  .chapter-guide ol { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+  .chapter-guide a { align-items: center; }
+  .directory-heading { display: block; }
+  .chapter-list a { padding: 14px 12px; gap: 12px; }
+  .chapter-era { display: none; }
+  h1 { font-size: 1.85rem; }
+  .window-label { display: none; }
+  .title-bar { font-size: 0.75rem; }
+  .site-name { font-size: 0.85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  body { padding: 0; background: white; }
+  .site-header, .chapter-nav, .chapter-guide, .page-turner, .status-bar, .site-footer, #demo-button { display: none; }
+  .window, .home-content, .chapter-content { border: 0; box-shadow: none; padding: 0; }
+  .title-bar { color: black; background: white; }
+  .page-layout, .home-intro { display: block; }
+  .reading-pane { padding: 0; }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A short, chapter-based guide to the history of web development, from the first website to modern web apps.">
+  <title>Chapter 2: Dynamic web content | A Brief History of Web Development</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="site-name" href="index.html"><span class="site-icon" aria-hidden="true">W</span> A Brief History of Web Development</a>
+    <p class="site-tagline">A small guide to a very big idea.</p>
+  </header>
+
+  <div class="window">
+    <div class="title-bar"><span aria-hidden="true">▣</span><span>A Brief History of Web Development</span><span class="window-label">1989 → Today</span></div>
+    <nav class="chapter-nav" aria-label="Main navigation">
+      <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chapterone.html"><span class="chapter-number color-1">01</span> Chapter 1</a></li>
+            <li><a href="chaptertwo.html" aria-current="page"><span class="chapter-number color-2">02</span> Chapter 2</a></li>
+            <li><a href="chapterthree.html"><span class="chapter-number color-3">03</span> Chapter 3</a></li>
+            <li><a href="chapterfour.html"><span class="chapter-number color-4">04</span> Chapter 4</a></li>
+            <li><a href="chapterfive.html"><span class="chapter-number color-5">05</span> Chapter 5</a></li>
+      </ul>
+    </nav>
+    <main id="main-content" class="chapter-content">
+      <div class="page-layout">
+        <article class="reading-pane">
+          <header class="chapter-heading">
+            <p class="eyebrow"><span class="chapter-number color-2">02</span> Chapter 2 / 1995–1998</p>
+            <h1>Dynamic web content</h1>
+            <p class="chapter-intro">JavaScript and CSS give webpages behavior and a style of their own.</p>
+          </header>
+          <div class="article-body">
+            <section class="chapter-section" id="javascript" aria-labelledby="javascript-title">
+              <p class="section-date">1995</p>
+              <h2 id="javascript-title">Pages start responding</h2>
+              <p>JavaScript was created by Brendan Eich at Netscape in 1995. It gave developers a way to respond to actions in the browser, changing text, checking forms, or updating a page after a button click.</p>
+              <p>Server-side tools such as CGI, Perl, and PHP developed alongside browser scripting. They handle work on a server, while browser JavaScript can change what the visitor sees. One did not simply grow out of the other.</p>
+            </section><figure class="image-window logo-image">
+              <div class="image-title"><span aria-hidden="true">▧</span> A page with personality</div>
+              <!-- Replace this src with images/your-image.jpg when your JPG is ready. -->
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                alt="The yellow unofficial JavaScript logo" width="640" height="420" loading="lazy"
+                data-fallback="javascript.png" data-fallback-alt="JavaScript logo from the original project"
+                data-fallback-caption="JavaScript adds behavior to the structure of an HTML page.">
+              <figcaption><span class="image-caption">JavaScript adds behavior to the structure of an HTML page. This familiar logo is from 2011.</span>
+                <span class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:JavaScript-logo.png">Image: Chris Williams</a> · <a href="https://commons.wikimedia.org/wiki/File:JavaScript-logo.png">Public domain / permissive license</a></span>
+              </figcaption>
+            </figure><div class="demo-box">
+              <h3>A tiny example</h3>
+              <p id="demo-message" aria-live="polite">Hello, world!</p>
+              <button class="button" id="demo-button" type="button" hidden>Change the greeting</button>
+              <noscript><p>Enable JavaScript to try the greeting button.</p></noscript>
+            </div><section class="chapter-section" id="css" aria-labelledby="css-title">
+              <p class="section-date">1996–1998</p>
+              <h2 id="css-title">Design gets its own language</h2>
+              <p>W3C published CSS1 as a recommendation in December 1996, followed by CSS2 in May 1998. Style sheets let developers control colors, fonts, spacing, and other presentation choices separately from the HTML content.</p>
+              <p>A shared style sheet could give many pages the same appearance. Browser differences still made some effects difficult, but the separation of structure and presentation became a lasting part of web development.</p>
+            </section><div class="code-example">
+              <h3>One page, three ingredients</h3>
+              <dl><dt>HTML</dt><dd>The content and structure.</dd><dt>CSS</dt><dd>The colors, layout, and type.</dd><dt>JavaScript</dt><dd>The behavior and interaction.</dd></dl>
+            </div><details class="sources" id="sources">
+              <summary>Sources &amp; further reading</summary>
+              <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript">MDN: JavaScript</a></li>
+                <li><a href="https://www.w3.org/press-releases/1996/css1-rec/">W3C: the CSS1 recommendation, 1996</a></li>
+                <li><a href="https://www.w3.org/press-releases/1998/css2/">W3C: the CSS2 recommendation, 1998</a></li>
+              </ul>
+            </details>
+          </div>
+          <nav class="page-turner" aria-label="Previous and next chapter">
+            <a class="button" href="chapterone.html">← Chapter 1</a>
+            <a class="button primary-button" href="chapterthree.html">Next: chapter 3 →</a>
+          </nav>
+        </article>
+        <aside class="chapter-guide" aria-label="Chapter guide">
+            <h2>Chapter directory</h2>
+            <ol>
+              <li><a href="chapterone.html"><span class="chapter-number color-1">01</span><span>The early years</span></a></li>
+              <li><a href="chaptertwo.html" aria-current="page"><span class="chapter-number color-2">02</span><span>Dynamic web content</span></a></li>
+              <li><a href="chapterthree.html"><span class="chapter-number color-3">03</span><span>The rise of Web 2.0</span></a></li>
+              <li><a href="chapterfour.html"><span class="chapter-number color-4">04</span><span>Mobile & responsive design</span></a></li>
+              <li><a href="chapterfive.html"><span class="chapter-number color-5">05</span><span>Modern web development</span></a></li>
+            </ol>
+            <p class="guide-note">Read in order, or open the chapter that interests you.</p>
+            <a class="guide-home" href="index.html">← Back to the start</a>
+          </aside>
+      </div>
+    </main>
+    <div class="status-bar"><span>Reading chapter 2 of 5</span><a href="#top">Back to top ↑</a></div>
+  </div>
+  <footer class="site-footer">
+    <p>A learning project by Michael Pacheco · Originally created in 2023</p>
+    <a href="https://github.com/michaelpacheco037">GitHub</a>
+  </footer>
+</body>
+</html>
